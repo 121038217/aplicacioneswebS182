@@ -13,6 +13,8 @@
 <body>
     @include('partials.scrollspy')
     
+    @include('partials.spinner')
+    
     @yield('contenido')
     
 </body>

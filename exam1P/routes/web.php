@@ -13,12 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::view('/','welcome')->name('rutainicio');
-Route::view('/vista1','vista1')->name('rustavista1');
 
-// Route::get('/vista2', function () {
-//    return view('vista2');
-//});
+Route::view('/vista1','vista1')->name('rutavista1');
+
+Route::view('/vista2','vista2')->name('rutavista2');
+
+Route::view('/vista3','vista3')->name('rutavista3');
+
+
 
 //Route::get('/vista3', function () {
-//    return view('vista3');
-// });
+  // return view('vista3')->name('rutavista3');
+//});
