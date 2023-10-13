@@ -1,7 +1,4 @@
 {
-    "name": "tu-proyecto",
-    "version": "1.0.0",
-    "description": "Descripci\u00f3n de tu proyecto",
     "private": true,
     "type": "module",
     "scripts": {
@@ -14,6 +11,6 @@
         "bootstrap": "^5.2.3",
         "laravel-vite-plugin": "^0.8.0",
         "sass": "^1.56.1",
-        "vite": "^2.7.0"
+        "vite": "^4.0.0"
     }
 }

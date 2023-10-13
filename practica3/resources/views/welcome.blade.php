@@ -1,14 +1,11 @@
-
-
-    @extends('layouts.plantilla')
+@extends('layouts.plantilla')
     
-    
-    @section('titulo','inicio')
+@section('titulo','Inicio') //se abre y se cierra
 
-    @section('contenido')
+@section('contenido')
 
-    <h1 class = "display-1 text-center text-danger mt-5">Home</h1>
-    
-    @endsection
+<h1 class="display-1 text-center text-danger mt-5">Home</h1>
+
+@endsection
 
     
