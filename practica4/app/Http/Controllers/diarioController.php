@@ -17,7 +17,9 @@ class diarioController extends Controller
     public function  metodoRecuerdos(){
         return view('recuerdos');
     }
-
-
+// El metodo guardar necesita una variable de tipo request
+    public function  metodoGuardar(Request $req){
+        return 'Se esta procesando tu recuerdo..!!';
+    }
 
 }
