@@ -3,13 +3,27 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\diarioController;
 
-Route::get('/',[diarioController::clase,'metodoInicio'] )->name('apodoInicio'); 
+//Ruta Individuales para Controlador
+/*
+Route::get('/',[diarioController::class,'metodoInicio'] )->name('apodoInicio'); 
 //Agregamos el metodo de la primera vista
-Route::get('Formulario',[diarioController::clase,'metodoFormulario'] )->name('apodoFormulario'); 
+Route::get('formulario',[diarioController::class,'metodoFormulario'] )->name('apodoFormulario'); 
 
-Route::get('Recuerdos',[diarioController::clase,'metodoRecuerdos'] )->name('apodoRecuerdos'); 
+Route::get('recuerdos',[diarioController::class,'metodoRecuerdos'] )->name('apodoRecuerdos'); 
+*/
+
+//Rutas Agrupadas tipo Controlador
+Route::controller(diarioController::class)->group(function (){
+    Route::get('/','metodoInicio')->name('apodoInicio');
+    Route::get('formulario','metodoFormulario')->name('apodoFormulario');
+    Route::get('recuerdos','metodoRecuerdos')->name('apodoRecuerdos');
+});
 
 
-//Route::get('/', function () {
-  //  return view('welcome');
-//});
+
+/*
+Route::view('/','welcome')->name('rutaInicio');
+Route::view('formulario','formulario')->name('rutaFormulario');
+Route::view('recuerdos','recuerdos')->name('rutaRecuerdos');
+
+*/
