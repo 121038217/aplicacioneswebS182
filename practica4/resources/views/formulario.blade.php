@@ -14,15 +14,19 @@
     </div>
 
     <div class="card-body">
-        <form>
+
+        <form method="POST" action="/guardarRecuerdo"> <!-- Agregamos el metodo POST para guardar-->
+          
+          @csrf <!-- Generador de token-->
+
             <div class="mb-3">
               <label class="form-label">Titulo:</label>
-              <input type="text" class="form-control">
+              <input type="text" name="txtTitulo class="form-control">
             </div>
 
             <div class="mb-3">
               <label class="form-label">Recuerdo:</label>
-              <input type="password" class="form-control">
+              <input type="password" name="txtRecuerdo" class="form-control">
             </div>
 
     </div>

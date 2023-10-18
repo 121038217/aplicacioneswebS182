@@ -7,10 +7,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/recuerdos">Recuerdos</a>
+            <a class="nav-link {{ request()->routeIs('apodoInicio')?'text-danger':''}}" aria-current="page" href="/">Inicio</a>
+          </li> <!--  request()->routeIs('apodoInicio')?'text-danger':''}} es para saber donde estamos en elos request de la palntilla -->
+          <li class="nav-item">
+            <a class="nav-link {{ request()->routeIs('apodoRecuerdos')?'text-danger':''}}" aria-current="page" href="/recuerdos">Recuerdos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/formularios">Formularios</a>
+            <a class="nav-link {{ request()->routeIs('apodoFormulario')?'text-danger':''}}" href="/formulario">Formularios</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

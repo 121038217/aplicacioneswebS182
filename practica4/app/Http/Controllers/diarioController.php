@@ -19,7 +19,15 @@ class diarioController extends Controller
     }
 // El metodo guardar necesita una variable de tipo request
     public function  metodoGuardar(Request $req){
-        return 'Se esta procesando tu recuerdo..!!';
+        echo"<p>";
+            echo $req->path();
+            echo " - ";
+            echo $req->method();
+            echo " - ";
+            echo $req->ip();
+            echo " - ";
+            echo $req->url();
+        echo"<p>";
     }
 
 }
