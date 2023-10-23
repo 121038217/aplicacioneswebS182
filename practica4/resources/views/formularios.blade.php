@@ -40,14 +40,14 @@
 
                     <div class="mb-3">
                         <label class="form-label">Titulo:</label>
-                        <input type="text" name="txtTitulo" class="form-control">
+                        <input type="text" name="txtTitulo" class="form-control" value="{{old('txtTitulo')}}" >
                         {{$errors->first('txtTitulo')}}
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Recuerdo:</label>
-                        <input type="text" name="txtRecuerdo" class="form-control">
-                        {{$errors->first('txtTitulo')}}
+                        <input type="text" name="txtRecuerdo" class="form-control" value="{{old('txtRecuerdo')}}">
+                        {{$errors->first('txtRecuerdo')}}
                     </div>
             </div>
         </div>
