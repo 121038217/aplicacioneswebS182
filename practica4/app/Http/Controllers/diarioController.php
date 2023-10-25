@@ -21,7 +21,7 @@ class diarioController extends Controller
 
     public function metodoGuardar(validadorFormDiario $req){
         
-        /* $validated = $req->validate([
+         /*$validated = $req->validate([
             'txtTitulo' => 'required|max:255',
             'txtRecuerdo' => 'required|max:25',
         ]); */
