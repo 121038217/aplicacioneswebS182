@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Alert;
 use Illuminate\Http\Request;
 use App\Http\Requests\validadorFormDiario;
 
@@ -26,6 +27,8 @@ class diarioController extends Controller
             'txtCorreroEditorial' => 'required|max:150',
         ]);
         */
+
+        Alert::success('Registro','Tu registro ha sido exitoso')->persistent(true);
 
         return redirect('/RegistroLibro')->with('confirmacion','El libro se guardo en el controlador');
     }

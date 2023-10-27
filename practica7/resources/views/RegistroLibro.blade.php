@@ -4,18 +4,22 @@
 
 @section('contenido')
 
+@include('sweetalert::alert')
+
 <h1 class="display-1 text-center text-primary fw-bold mt-5">Registro de Libros</h1>
 
 <div div class="container mt-5">
-  
-  @if(session()->has('confirmacion'))
 
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-      <strong>{{ session('confirmacion')}}</strong>
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-  
+  @if(session()->has('Registro'))
+  <script>
+    Swal.fire({
+      'Exitoso',
+      'Registro exitoso',
+      'success'
+    });
+  </script>
   @endif
+
 
   @if($errors->any())
 
@@ -60,7 +64,7 @@
         
                   <div class="mb-3">
                     <label class="form-label">Número de Páginas:</label>
-                    <input type="number" name="txtPaginas" class="form-control" value="{{old('txtPaginas')}}">
+                    <input name="txtPaginas" class="form-control" value="{{old('txtPaginas')}}">
                     {{$errors->first('txtPaginas')}}
                   </div>
         
@@ -72,7 +76,7 @@
         
                   <div class="mb-3">
                     <label class="form-label">Correo de la Editorial:</label>
-                    <input type="email" name="txtCorreoEditorial" class="form-control" value="{{old('txtCorreoEditorial')}}">
+                    <input name="txtCorreoEditorial" class="form-control" value="{{old('txtCorreoEditorial')}}">
                     {{$errors->first('txtCorreroEditorial')}}
                   </div>
           
