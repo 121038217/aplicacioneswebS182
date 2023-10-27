@@ -42,8 +42,8 @@
               
               <div class="mb-3">
                   <label class="form-label">ISBN:</label>
-                  <input type="number" nane="ISBN" class="form-control" value="{{old('ISBN')}}">
-                  {{$errors->first('ISBN')}}
+                  <input type="number" name="txtISBN" class="form-control" value="{{old('txtISBN')}}">
+                  {{$errors->first('txtISBN')}}
                 </div>
         
                 <div class="mb-3">

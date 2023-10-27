@@ -22,7 +22,9 @@ class validadorFormDiario extends FormRequest
     public function rules(): array
     {
         return [
-            'ISBN' => 'required|min:13',
+            'txtISBN' => 'required|min:13',
+            'txtPaginas' => 'required|numeric',
+            'txtCorreoEditorial' => 'required|email',
         ];
     }
 }
