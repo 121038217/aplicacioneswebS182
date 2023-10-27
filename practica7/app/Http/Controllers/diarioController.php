@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\validadorFormDiario;
 
 class diarioController extends Controller
 {
@@ -13,6 +14,20 @@ class diarioController extends Controller
     public function metodoRegistroLibro(){
         return view('RegistroLibro'); 
     }
+    public function metodoGuardar(validadorFormDiario $req){
+        
+        //return $req->all(); <--Ver token -->
+       /* $validated = $req->validate([
+            'txtISBN' => 'required|min:13',
+            'txtTitulo' => 'required|max:255',
+            'txtAutor' => 'required|max:255',
+            'txtPaginas' => 'required|max:10000',
+            'txtEditorial' => 'required|max:255',
+            'txtCorreroEditorial' => 'required|max:150',
+        ]);
+        */
 
+        return redirect('/RegistroLibro')->with('confirmacion','El libro se guardo en el controlador');
+    }
 
 }

@@ -16,3 +16,5 @@ use App\Http\Controllers\diarioController;
  // Agregamos el metodo a nuestras vistas
 Route::get('/',[diarioController::class,'metodoPrincipal'])->name('Principal');
 Route::get('RegistroLibro',[diarioController::class,'metodoRegistroLibro'])->name('RegistroLibro');
+//Agregamos el metodo guardar
+Route::post('GuardarRegistroLibro',[diarioController::class,'metodoGuardar'])->name('GuardarRegistroLibro');
