@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\diarioController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -12,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::view('/', 'welcome')->name('rutaPrincipal');
-Route::view('RegistroLibro', 'RegistroLibro')->name('rutaRegistroLibro');
-
-
+ // Agregamos el metodo a nuestras vistas
+Route::get('/',[diarioController::class,'metodoPrincipal'])->name('Principal');
+Route::get('RegistroLibro',[diarioController::class,'metodoRegistroLibro'])->name('RegistroLibro');
