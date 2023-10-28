@@ -17,7 +17,7 @@
     @include('partials.navbar')
     
     @yield('contenido')
-    <div div class="container mt-5">
+
         <div class="card text-center">
             <div class="card-footer text-body-secondary" >
                 BibliotecaUPQ© 28 de octubre del 2023

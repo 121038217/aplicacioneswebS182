@@ -6,9 +6,9 @@
 
 @include('sweetalert::alert')
 
-<h1 class="display-1 text-center text-primary fw-bold mt-5">Registro de Libros</h1>
+<h1 class="display-1 text-center text-primary fw-bold mt-4">Registro de Libros</h1>
 
-<div div class="container mt-5">
+<div div class="container mt-3">
 
   @if(session()->has('Registro'))
   <script>
