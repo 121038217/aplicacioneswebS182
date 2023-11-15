@@ -2,12 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\diarioController;
+use App\Http\Controllers\controllerCRUDd;
+
+
+
+// ruta controllerCRUD
+Route::get('/recuerdo/create',[controllerCRUDd::class,'create'])->name('recuerdo.create');  
+Route::post('/recuerdo',[controllerCRUDd::class,'store'])->name('recuerdo.store');
+Route::get('/recuerdo',[controllerCRUDd::class,'index'])->name('recuerdo.index');
 
 Route::get('/', [diarioController::class, 'metodoInicio'])->name('Inicio');
-Route::get('/formularios', [diarioController::class, 'metodoFormularios'])->name('Formularios');
-Route::get('/recuerdos', [diarioController::class, 'metodoRecuerdos'])->name('Recuerdos');
 
-Route::post('/guardarRecuerdo', [diarioController::class, 'metodoGuardar'])->name('Guardar');
 
 /* Route::controller(diarioController ::class)->group(function(){
 

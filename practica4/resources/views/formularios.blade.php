@@ -35,7 +35,7 @@
         </div>
         <div class="card-body">
             <div class="container">
-                <form method="POST" action="/guardarRecuerdo">
+                <form method="POST" action="/recuerdo">
                     @csrf
 
                     <div class="mb-3">
@@ -58,6 +58,7 @@
         </form>
         </div>
     </div>
+</form>
 </div>
 
 
